@@ -46,7 +46,7 @@ export function Indicator({step, setStep}) {
                     label = {"←"}
                     classNameLabel = {"card-prev-btn"}
                 />
-            ) : ( <div>
+            ) : ( <div className="card-div-btns">
                     <PreviousButton
                         onClick = {previousStep}
                         label = {"←"}

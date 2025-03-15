@@ -22,27 +22,28 @@ export function Card() {
 
     return (
         <div className="card-image">
-            <div className="card">
+            <div key={"color" + step} id={"color" + step} className="card">
                 <img className="card-image" src={currentData.image} alt="image1"></img>
             </div>
             <div className="card-content">
                 <h1>{currentData.title}</h1>
-                <p>{currentData.description}</p>
+                <p id="card-p">{currentData.description}</p>
             </div>
             <div className="card-directions">
-                <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                {/* <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span className="sr-only"></span>
                 </a>
                 <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                     <span className="sr-only"></span>
-                </a>
+                </a> */}
+
+                <Indicator
+                    step={step}
+                    setStep={setStep}
+                />
             </div>
-            <Indicator
-            step = {step}
-            setStep = {setStep}
-            />
         </div>
     )
 }
