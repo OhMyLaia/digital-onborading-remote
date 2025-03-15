@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.cjx';
+import 'App.cjx';
 // import { tutorialData } from 
 
 export function Card() {
