@@ -1,16 +1,15 @@
 import './App.css';
-import { BrowserRouter } from "react-router-dom";
-import AppRoutes from "./routes/Router";
-// import database from "./database.json"
-// import { useEffect, useState } from 'react';
+import { BrowserRouter as Router } from "react-router-dom";
+import { AppRoutes } from "./routes/Router";
 
 
 function App() {
 
   return (
-    <BrowserRouter>
-    <AppRoutes />
-    </BrowserRouter>
+    <div>
+      <AppRoutes />
+    </div>
+
   )
 }
 
