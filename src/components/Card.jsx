@@ -10,8 +10,15 @@ export function Card() {
     const [step, setStep] = useState(initialStateFun);
     const currentData = database[step];
 
-    (!currentData) ? console.error("could not find any data") : currentData;
-    (!currentData.image) ? console.error("could not find any image") : currentData;
+    if (!currentData) {
+        console.error("could not find any data")
+        return null;
+    }
+
+    if (!currentData.image) {
+        console.error("could not find any image");
+        return null;
+    }
 
     return (
         <div className="card-image">
