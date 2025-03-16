@@ -21,6 +21,7 @@ export function Card() {
     }
 
     return (
+        <div>
         <div className="card-image">
             <div key={"color" + step} id={"color" + step} className="card">
                 <img className="card-image" src={currentData.image} alt="image1"></img>
@@ -29,16 +30,8 @@ export function Card() {
                 <h1>{currentData.title}</h1>
                 <p id="card-p">{currentData.description}</p>
             </div>
+        </div>
             <div className="card-directions">
-                {/* <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="sr-only"></span>
-                </a>
-                <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="sr-only"></span>
-                </a> */}
-
                 <Indicator
                     step={step}
                     setStep={setStep}
