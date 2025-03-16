@@ -1,3 +1,6 @@
+@import "../src/components/Card/Card.module.css";
+@import "../src/components/NavigationControls/NavigationControls.module.css";
+
 #root {
   max-width: 1280px;
   max-height: fit-content;
@@ -6,90 +9,6 @@
   box-sizing: border-box;
 }
 
-/* .card {
-  height: 25em;
-  border-radius: 0%;
-  border-width: 0;
-} */
-
-.card {
-  display: flex;
-  /* justify-content: space-between; */
-  /* flex-direction: column; */
-  align-items: center;
-  height: 25em;
-  border-radius: 0%;
-  border-width: 0;
-}
-
-.card-image img {
-  width: 80%;
-  height: 80%;
-  object-fit: contain;
-}
-
-#color0 {
-  background-color: rgb(54, 177, 186);
-}
-
-#color1 {
-  background-color: rgb(224, 221, 228);
-}
-
-#color2 {
-  background-color: rgb(255, 211, 101);
-}
-
-.card-content {
-  display: flex;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  padding: 1em;
-  padding: 1em;
-  flex-direction: column;
-}
-
-#card-p {
-  color: grey;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: lighter;
-}
-
-.card-next-btn {
-  width: 3em;
-  height: 3em;
-  background-color: black;
-  color: white;
-  font-size: larger;
-  border-radius: 100%;
-
-}
-
-.card-prev-btn {
-  width: 3em;
-  height: 3em;
-  background-color: white;
-  color: black;
-  font-size: larger;
-  border-radius: 100%;
-}
-
-.card-directions {
-  display: flex;
-  /* justify-content: flex-end; */
-  /* margin-top: auto; */
-
-}
-
-.card-buttons {
-  display: flex;
-  position: fixed;
-  /* justify-content: flex-end; */
-  bottom: 2em; /* Keeps buttons at the bottom */
-  right: 1em; /* Aligns to the right */
-  gap: 1em;
-  padding: 0 1em 0 1em;
-}
-
-.card-buttons button {
-  margin: 0 0.3em;
+* {
+  box-sizing: border-box;
 }

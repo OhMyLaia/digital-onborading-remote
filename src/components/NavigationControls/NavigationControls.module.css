@@ -1,0 +1,53 @@
+.card-next-btn {
+    width: 3em;
+    height: 3em;
+    background-color: black;
+    color: white;
+    font-size: larger;
+    border-radius: 100%;
+
+}
+
+.card-prev-btn {
+    width: 3em;
+    height: 3em;
+    background-color: white;
+    color: black;
+    font-size: larger;
+    border-radius: 100%;
+}
+
+.card-directions {
+    display: flex;
+}
+
+.card-buttons {
+    display: flex;
+    position: fixed;
+    bottom: 2em;
+    right: 1em;
+    gap: 1em;
+    padding: 0 1em 0 1em;
+}
+
+.card-buttons button {
+    margin: 0 0.3em;
+}
+
+@media (min-width: 1024px) { /* Larger screens */
+    .card-buttons {
+        bottom: 2em; /* Adjust this value as needed */
+        margin: 2em;
+        /* background-color: red; */
+    }
+
+    .card-next-btn {
+        width: 4em;
+        height: 4em;
+    }
+
+    .card-prev-btn {
+        width: 4em;
+        height: 4em;
+    }
+}

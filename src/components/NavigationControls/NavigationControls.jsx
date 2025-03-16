@@ -1,4 +1,5 @@
 import database from "/public/assets/database.json";
+import "./NavigationControls.module.css"
 
 function NextButton({ onClick, label, classNameLabel }) {
     return (
@@ -18,8 +19,8 @@ function PreviousButton({ onClick, label, classNameLabel }) {
     )
 }
 
-export function Indicator({step, setStep}) {
-    console.log("Indicator received step:", step);
+export function NavigationControls({step, setStep}) {
+    console.log("NavigationControls received step:", step);
 
     const nextStep = () => {
         console.log("Next button clicked! Current step:", step);

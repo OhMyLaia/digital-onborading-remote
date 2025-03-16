@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Card from "../components/Card";
+import Card from "../components/Card/Card";
 
 
 

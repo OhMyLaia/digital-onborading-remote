@@ -1,7 +1,9 @@
 // import { data } from "react-router-dom";
-import { Indicator } from "./Indicator";
+import { NavigationControls } from "../NavigationControls/NavigationControls";
 import database from "/public/assets/database.json";
 import { useState } from "react";
+import "./Card.module.css";
+import { Indicator } from "./Indicator/Indicator";
 
 
 export function Card() {
@@ -28,15 +30,21 @@ export function Card() {
             </div>
             <div className="card-content">
                 <h1>{currentData.title}</h1>
-                <p id="card-p">{currentData.description}</p>
+                <p className="card-p">{currentData.description}</p>
             </div>
         </div>
-            <div className="card-directions">
-                <Indicator
-                    step={step}
-                    setStep={setStep}
-                />
-            </div>
+        <div className="card-indicator">
+            <Indicator
+            array = {currentData}
+            step = {step}
+            ></Indicator>
+        </div>
+        <div className="card-directions">
+            <NavigationControls
+                step = {step}
+                setStep = {setStep}
+            />
+        </div>
         </div>
     )
 }

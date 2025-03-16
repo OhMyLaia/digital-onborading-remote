@@ -1,4 +1,5 @@
-import './App.css';
+import "./App.css";
+import "./components/Card/Card.module.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import { AppRoutes } from "./routes/Router";
 
