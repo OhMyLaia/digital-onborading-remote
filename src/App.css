@@ -1,5 +1,6 @@
 @import "../src/components/Card/Card.module.css";
 @import "../src/components/NavigationControls/NavigationControls.module.css";
+@import "../src/components/Indicator/Indicator.module.css";
 
 #root {
   max-width: 1280px;

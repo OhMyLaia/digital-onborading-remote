@@ -3,7 +3,7 @@ import { NavigationControls } from "../NavigationControls/NavigationControls";
 import database from "/public/assets/database.json";
 import { useState } from "react";
 import "./Card.module.css";
-import { Indicator } from "./Indicator/Indicator";
+import { Indicator } from "../Indicator/Indicator.jsx";
 
 
 export function Card() {
@@ -34,8 +34,9 @@ export function Card() {
             </div>
         </div>
         <div className="card-indicator">
+            <p>card-indicator</p>
             <Indicator
-            array = {currentData}
+            arrayProp = {currentData}
             step = {step}
             ></Indicator>
         </div>
