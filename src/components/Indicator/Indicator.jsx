@@ -3,11 +3,10 @@ import styled from 'styled-components';
 import "./Indicator.module.css";
 
 const Dot = styled.div`
-width: 10px;
-height: 10px;
-border-radius: 50%;
+width: ${(props) => (props.active ? "20px" : "10px")};
+height: ${(props) => (props.active ? "10px" : "10px")};
+border-radius: ${(props) => (props.active ? "20%" : "50%")};
 background-color: ${(props) => (props.active ? "black" : "grey")};
-border: 1px solid red;
 transition: background-color 0.3s ease-in-out;
 `;
 
@@ -16,20 +15,25 @@ const IndicatorContainer = styled.div`
     gap: 0.5em;
     justify-content: center;
     margin-top: 1em;
-    background-color: blue;
 `;
 
-export function Indicator({ arrayProp = [], step }) {
-    if (!Array.isArray(arrayProp)) { return console.log("array prop is not an array") }
+export function Indicator({step, setStep}) {
+    if (!Array.isArray(database)) { return console.log("array is not an array") }
     return (
         console.log(`i'm in .map`),
         <IndicatorContainer>
             {
-                arrayProp.map((_, index) => (
-                    <Dot key={index} active={index === step} />
+                database.map((_, index) => (
+                    <Dot key={index}
+                    active={index === step}
+                    onClick={ () => setStep(index) }
+                    />
                 ))
             }
         </IndicatorContainer>
+
+
     )
 }
+
 

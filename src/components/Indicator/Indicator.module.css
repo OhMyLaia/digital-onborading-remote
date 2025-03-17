@@ -1,3 +1,8 @@
 .card-indicator {
-    background-color: red;
+    display: flex;
+    position: fixed;
+    bottom: 2em;
+    left: 1em;
+    gap: 1em;
+    padding: 0 1em 0 1em;
 }
