@@ -31,7 +31,7 @@ Before running the project, ensure you have the following installed:
 
 1. **Clone the repo**  
    `git clone https://github.com/OhMyLaia/digital-onborading-remote
-   cd Sprint-3-movies-remote.git`
+   cd digital-onborading-remote`
    
 2. 	**Install the dependencies**
 - `npm install react-dom`: provides DOM-specific methods for React.
