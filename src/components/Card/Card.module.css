@@ -1,16 +1,54 @@
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide {
+    /* full width of the container, else we can see the 3 images */
+    flex: 0 0 100%; 
+    text-align: center;
+    position: relative;
+}
+
+.step-0 {
+    transform: translateX(0%);
+}
+
+.step-1 {
+    transform: translateX(-100%);
+}
+
+.step-2 {
+    transform: translateX(-200%);
+}
+
+.step-3 {
+    transform: translateX(-300%);
+}
+
 .card {
     display: flex;
     align-items: center;
-    height: 25em;
+    justify-content: space-around;
+    height: 22em;
     border-radius: 0%;
     border-width: 0;
+    margin-bottom: 1em;
 }
 
 .card-image {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers vertically if it has a fixed height */
+    justify-content: center;
     width: 100%;
+    height: 60%;
 }
 
 .card-image img {
@@ -41,6 +79,7 @@
 }
 
 .card-p {
+    width: 70%;
     display: flex;
     color: grey;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -48,10 +87,17 @@
     font-size: larger;
 }
 
-@media (min-width: 1024px) { /* Larger screens */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+@media (min-width: 1024px) {
 
     .card-content {
-        width: 60%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         text-align: center;

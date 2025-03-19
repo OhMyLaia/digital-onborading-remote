@@ -28,26 +28,44 @@ export function Card() {
 
     return (
         <div>
-            <div className="card-image">
-                <div key={"color" + step} id={"color" + step} className="card">
-                    <img className="card-image" src={currentData.image} alt="image1"></img>
-                </div>
-                <div className="card-content">
-                    <h1>{currentData.title}</h1>
-                    <p className="card-p">{currentData.description}</p>
-                </div>
-            </div>
-            <div className="card-indicator">
-                <Indicator
-                step = {step}
-                setStep = {setStep}
-                />
-                <NavigationControls
-                    step = {step}
-                    setStep = {setStep}
-                />
+        <div className="slider-container">
+            <div className={`slider step-${step}`}>
+                {database.map((item, index) => (
+                    <div key={index} className="slide">
+                        <div id={`color${index}`} className="card">
+                            <img className="card-image" src={item.image} alt={item.title} />
+                            </div>
+                            <div className="card-content">
+                                <h1>{item.title}</h1>
+                                <p className="card-p">{item.description}</p>
+                                </div>
+                                </div>
+                ))}
+                {/* <div className="card-image"> */}
+                    {/* <div key={"color" + step} id={"color" + step} className="card">
+                        <img className="card-image" src={currentData.image} alt="image1"></img>
+                    </div>
+                    <div className="card-content">
+                        <h1>{currentData.title}</h1>
+                        <p className="card-p">{currentData.description}</p>
+                    </div> */}
+                {/* </div> */}
             </div>
         </div>
+                <div className="controls">
+
+                <div className="card-indicator">
+                    <Indicator
+                    step = {step}
+                    setStep = {setStep}
+                    />
+                    <NavigationControls
+                        step = {step}
+                        setStep = {setStep}
+                    />
+                </div>
+                </div>
+                </div>
     )
 }
 
