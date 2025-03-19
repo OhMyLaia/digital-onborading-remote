@@ -30,7 +30,7 @@ Before running the project, ensure you have the following installed:
 ### 📥 Install dependencies
 
 1. **Clone the repo**  
-   `git clone https://github.com/OhMyLaia/Sprint-3-movies-remote.git
+   `git clone https://github.com/OhMyLaia/digital-onborading-remote
    cd Sprint-3-movies-remote.git`
    
 2. 	**Install the dependencies**
