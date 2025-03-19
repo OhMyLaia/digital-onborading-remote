@@ -1,3 +1,7 @@
+* {
+    margin: 0 auto;
+}
+
 .slider-container {
     position: relative;
     width: 100%;
