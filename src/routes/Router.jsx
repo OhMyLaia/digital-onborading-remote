@@ -1,15 +1,14 @@
 import { Routes, Route } from "react-router-dom";
-import Card from "../components/Card/Card";
+import { SliderView } from "../../src/views/slider-view.jsx"
 
 
 
 export const AppRoutes = () => {
     return (
         <Routes>
-            <Route path='/' element={<Card />} />
+            <Route path='/' element={<SliderView />} />
+            <Route path='/:slug' element={<SliderView />} />
             {/* route error -> / y route notfound crear archivos routes.jsx-> * */}
         </Routes>
     );
 };
-
-

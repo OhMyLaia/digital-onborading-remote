@@ -1,5 +1,8 @@
-import database from "/public/assets/database.json";
+import databaseJson from "../../data/database.json";
 import "./NavigationControls.module.css"
+
+const database = Object.values(databaseJson);
+
 
 function NextButton({ onClick, label, classNameLabel }) {
     return (

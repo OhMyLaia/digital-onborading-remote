@@ -1,25 +1,30 @@
 // import { data } from "react-router-dom";
 import { NavigationControls } from "../NavigationControls/NavigationControls";
-import databaseJson from "/public/assets/database.json";
-import { useState } from "react";
+import databaseJson from "../../data/database.json";
+// import { useState } from "react";
 import "./Card.module.css";
 import { Indicator } from "../Indicator/Indicator.jsx";
+import { SliderView } from "../../views/slider-view.jsx"
 
-const database = Object.values(databaseJson);
 
-export function Card() {
+export function Card( {step, setStep}) {
 
-    const initialStateFun = () => 0;
-    const [step, setStep] = useState(initialStateFun);
+    // const initialStateFun = () => 0;
+    // const [step, setStep] = useState(initialStateFun);
+
+    const database = Object.values(databaseJson);
+    console.log("database:", database);
+
+
     const currentData = database[step];
 
     console.log("currentData:", currentData);
     console.log("database:", database);
 
-    if (!currentData) {
-        console.error("could not find any data")
-        return null;
-    }
+    // if (!currentData) {
+    //     console.error("could not find any data")
+    //     return null;
+    // }
 
     if (!currentData.image) {
         console.error("could not find any image");
@@ -38,35 +43,23 @@ export function Card() {
                             <div className="card-content">
                                 <h1>{item.title}</h1>
                                 <p className="card-p">{item.description}</p>
-                                </div>
-                                </div>
+                            </div>
+                        </div>
                 ))}
-                {/* <div className="card-image"> */}
-                    {/* <div key={"color" + step} id={"color" + step} className="card">
-                        <img className="card-image" src={currentData.image} alt="image1"></img>
-                    </div>
-                    <div className="card-content">
-                        <h1>{currentData.title}</h1>
-                        <p className="card-p">{currentData.description}</p>
-                    </div> */}
-                {/* </div> */}
             </div>
         </div>
-                <div className="controls">
+        </div>
+    )};
 
-                <div className="card-indicator">
-                    <Indicator
-                    step = {step}
-                    setStep = {setStep}
-                    />
-                    <NavigationControls
-                        step = {step}
-                        setStep = {setStep}
-                    />
-                </div>
-                </div>
-                </div>
-    )
-}
-
-export default Card;
+{/* <div className="controls">
+    <div className="card-indicator">
+        <Indicator
+        step = {step}
+        setStep = {setStep}
+        />
+        <NavigationControls
+            step = {step}
+            setStep = {setStep}
+        />
+    </div>
+</div> */}

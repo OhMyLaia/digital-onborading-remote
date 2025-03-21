@@ -1,6 +1,8 @@
-import database from "/public/assets/database.json";
+import databaseJson from "../../data/database.json";
 import styled from 'styled-components';
 import "./Indicator.module.css";
+
+const database = Object.values(databaseJson);
 
 const Dot = styled.div`
 width: ${(props) => (props.active ? "20px" : "10px")};
@@ -31,8 +33,6 @@ export function Indicator({step, setStep}) {
                 ))
             }
         </IndicatorContainer>
-
-
     )
 }
 
