@@ -4,8 +4,7 @@ import{ Card } from "../components/Card/Card";
 import { Indicator } from "../components/Indicator/Indicator";
 import { NavigationControls } from "../components/NavigationControls/NavigationControls";
 import database from "../data/database.json"
-import "./SliderView.module.css";
-// import database from "/public/assets/database.json"
+import styles from "./SliderView.module.css";
 
 export const SliderView = () => {
 
@@ -37,23 +36,24 @@ export const SliderView = () => {
     console.log("database:", database);
 
     return (
-        <div className="slider-view">
-            <div className="controls">
-                <div className="card-indicator">
-                    <Card
-                    step={step}
-                    setStep={setStep}
-                    />
-                    <Indicator 
-                    step={step}
-                    setStep={setStep}
-                    />
-                    <NavigationControls
-                    step={step}
-                    setStep={setStep}
-                    />
+        <div>
+            
+        <div className={styles["slider-view"]}>
+                <Card
+                step={step}
+                setStep={setStep}
+                />
+        </div>
+            <div className={styles["controls"]}>
+                <Indicator 
+                step={step}
+                setStep={setStep}
+                />
+                <NavigationControls
+                step={step}
+                setStep={setStep}
+                />
             </div>
         </div>
-    </div>
     )
 }

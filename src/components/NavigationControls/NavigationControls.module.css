@@ -24,7 +24,7 @@
 .card-buttons {
     display: flex;
     position: fixed;
-    bottom: 1em;
+    bottom: 3em;
     right: 1em;
     gap: 1em;
     padding: 0 1em 0 1em;

@@ -1,7 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { SliderView } from "../../src/views/slider-view.jsx"
-
-
+import { SliderView } from "../views/SliderView.jsx";
 
 export const AppRoutes = () => {
     return (

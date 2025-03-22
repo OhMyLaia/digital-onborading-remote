@@ -1,11 +1,5 @@
-// import { data } from "react-router-dom";
-import { NavigationControls } from "../NavigationControls/NavigationControls";
 import databaseJson from "../../data/database.json";
-// import { useState } from "react";
 import "./Card.module.css";
-import { Indicator } from "../Indicator/Indicator.jsx";
-import { SliderView } from "../../views/slider-view.jsx"
-
 
 export function Card( {step, setStep}) {
 
@@ -51,15 +45,3 @@ export function Card( {step, setStep}) {
         </div>
     )};
 
-{/* <div className="controls">
-    <div className="card-indicator">
-        <Indicator
-        step = {step}
-        setStep = {setStep}
-        />
-        <NavigationControls
-            step = {step}
-            setStep = {setStep}
-        />
-    </div>
-</div> */}

@@ -3,46 +3,46 @@
 }
 
 .slider-view {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: red;
-    padding: 20px;
+    /* display: flex; */
+    position: relative;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    height: 100vh;
+    /* background-color: red; */
+    /* padding: 20px; */
 }
 
 .controls {
     display: flex;
-    flex-direction: column;
+    position: absolute;
+    flex-direction: row;
+    bottom: 0em;
+    left: 2em;
     align-items: center;
-    gap: 20px; /* Space between components */
-}
+    gap: 20px;
+    /* background-color: red; */
+} 
 
-
-.controls {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    margin-top: 1em;
-}
 
 .card-indicator {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     width: 100%;
     max-width: 500px;
     gap: 10px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .slider-view {
-        padding: 10px;
-    }
-    
+
+@media (max-width: 1024px) {
     .controls {
-        gap: 10px;
+    bottom: 5em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .controls {
+    bottom: 4.5em;
     }
 }
