@@ -21,22 +21,6 @@ h1 {
     margin-bottom: 0.5em;
 }
 
-.step-0 {
-    transform: translateX(0%);
-}
-
-.step-1 {
-    transform: translateX(-100%);
-}
-
-.step-2 {
-    transform: translateX(-200%);
-}
-
-.step-3 {
-    transform: translateX(-300%);
-}
-
 .card {
     display: flex;
     align-items: center;
@@ -60,18 +44,6 @@ h1 {
     height: 80%;
     object-fit: contain;
     margin-top: 2em;
-}
-
-#color0 {
-    background-color: rgb(54, 177, 186);
-}
-
-#color1 {
-    background-color: rgb(224, 221, 228);
-}
-
-#color2 {
-    background-color: rgb(255, 211, 101);
 }
 
 .card-content {

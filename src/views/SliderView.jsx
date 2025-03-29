@@ -8,8 +8,7 @@ import styles from "./SliderView.module.css";
 
 export const SliderView = () => {
 
-    const initialStateFun = () => 0;
-    const [step, setStep] = useState(initialStateFun);
+    const [step, setStep] = useState(0);
     console.log("SliderView - step:", step);
     const currentData = database[step];
     const navigate = useNavigate();
